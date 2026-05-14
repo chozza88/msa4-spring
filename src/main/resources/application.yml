@@ -1,3 +1,16 @@
 spring:
   application:
     name: msa4-spring
+  web:
+    error:
+      include-stacktrace: always
+logging:
+  file:
+    # 로그 파일 경로
+    name: logs/error.log
+  level:
+    # 로그 출력 레벨 설정(trace, debug, info, warn, error)
+    root: error
+
+    # 특정 패키지만 로그 출력 레벨 설정
+    com.msa4spring.controllers: debug
